@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 你为什么要看这个源代码？ 你在浪费时间。 去买$QING -->
+    <!-- WHy r u stalking the inspect element go buy $QING u motherfucker -->
+  <title>Qing Coin</title>
+  <link rel="icon" type="image/png" href="biao.png" />
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <script type="text/javascript" src="life.js"></script>
+  <style>
+    @font-face {
+        font-family: 'Chinese Dragon';
+        src: url('ChineseDragon-Regular.eot');
+        src: url('ChineseDragon-Regulard41d.eot?#iefix') format('embedded-opentype'),
+            url('ChineseDragon-Regular.woff2') format('woff2'),
+            url('ChineseDragon-Regular.woff') format('woff'),
+            url('ChineseDragon-Regular.ttf') format('truetype'),
+            url('ChineseDragon-Regular.svg#ChineseDragon-Regular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+  
+    body {
+        background-image: url('biao.png');
+        background-repeat: repeat;
+    }
+
+    #container {
+      position: relative;
+    }
+
+    #video1 {
+      position: absolute;
+      background-color: white;
+      bottom: 10px;
+      left: 10px;
+      border: dashed black 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .video {
+      font-family: 'Chinese Dragon'; font-weight: normal; font-style: normal;
+      background-color: white;
+      border: 5px dashed black;
+      margin: auto;
+      width: 495px;
+      margin-right: 5px;
+      margin-top: 25px;
+      float: right;
+      max-height: 660px;
+      overflow: hidden;
+    }
+    
+    #image-top-right {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      height: 175px;
+      width: 175px;
+    }
+    #image-top-left {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      height: 175px;
+      width: 175px;
+    }
+    #dark-mode-icon {
+      position: fixed;
+      top: 10px;
+      right: 175px;
+      height: 50px;
+    }
+    
+    #titlediv {
+      font-family: 'Chinese Dragon'; font-weight: normal; font-style: normal;
+      font-size: 80px;
+      text-align: center;
+      background-color: white;
+      border: 5px dashed black;
+      margin: auto;
+      width: 1024px;
+      margin-top: 65px;
+    }
+    
+    #infodiv {
+      font-family: 'Chinese Dragon'; font-weight: normal; font-style: normal;
+      font-size: 36px;
+      text-align: center;
+      background-color: white;
+      border: 5px dashed black;
+      margin: auto;
+      width: 1024px;
+      margin-top: 25px;
+    }
+    
+    #gameDiv {
+      font-family: 'Chinese Dragon'; font-weight: normal; font-style: normal;
+      font-size: 36px;
+      text-align: center;
+      background-color: white;
+      border: 5px dashed black;
+      margin: auto;
+      width: 1024px;
+      margin-top: 25px;
+    }
+    
+    #teamdiv {
+      font-family: 'Chinese Dragon'; font-weight: normal; font-style: normal;
+      font-size: 36px;
+      text-align: center;
+      background-color: white;
+      border: 5px dashed black;
+      margin: auto;
+      width: 1024px;
+      margin-top: 25px;
+    }
+    
+    #lifeDiv {
+      font-family: 'Chinese Dragon'; font-weight: normal; font-style: normal;
+      font-size: 36px;
+      text-align: center;
+      background-color: white;
+      border: 5px dashed black;
+      margin: auto;
+      width: 1024px;
+      margin-top: 25px;
+      padding-bottom: 15px;
+    }
+    
+    #galleryDiv {
+      font-family: 'Chinese Dragon'; font-weight: normal; font-style: normal;
+      font-size: 36px;
+      text-align: center;
+      background-color: white;
+      border: 5px dashed black;
+      margin: auto;
+      width: 1024px;
+      margin-top: 25px;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+    
+    .ndmw {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .ndmw-content {
+      font-family: 'Chinese Dragon'; font-weight: normal; font-style: normal;
+      font-size: 36px;
+      text-align: center;
+      background-color: #ffffff;
+      margin: auto;
+      padding: 20px;
+      border: 5px dashed #000;
+      width: 525px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+
+    .close {
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .closeBiao {
+      font-size: 120px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    #song {
+        margin: auto;
+    }
+    
+    twitterwidget::shadow .EmbeddedTweet {
+        width: 300px;
+        max-width: 300px;
+    }
+    
+    #centerCol {
+        width: 1024px;
+        max-width: 1024px;
+        margin: auto;
+    }
+    
+    .teamTable {
+        width: 900px; 
+        margin-top: 15px;
+        margin-bottom: 15px;
+                border: 1px dotted gray; 
+
+    }
+    
+    .teamTable tr {
+        text-align: center;
+        vertical-align: center;
+    }
+    
+    a {
+        text-decoration: none;
+        }
+    
+    .gallery-container {
+        width: 1000px;
+        height: 352px;
+        overflow: auto;
+        border: 1px solid gray;
+    }
+
+    #gallery {
+        white-space: nowrap;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .gallery-item {
+        display: inline-block;
+        height: 300px;
+        margin: 10px;
+        background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <a href="javascript:thereIsNoDarkMode();"><img id="dark-mode-icon" src="darkmode.png"/></a>
+  <div id="container">
+  </div>
+  
+  <div id="ndm" class="ndmw">
+    <!-- Modal content -->
+    <div class="ndmw-content">
+      <img src="no.jpg" width="450px"/>
+      <p>
+            FUCk u Jeets noob ass bitch want dark mode<br/>dArk ModE wiLL be aDD wheN 1 MIL mc
+      </p>
+      <p>
+            太阳永远照耀着$QING。 <br/> 他妈的没有黑暗模式。
+      </p>
+      <button class="close" onclick="closeIt()">$QING</button>
+      
+    </div>
+  </div>
+  
+  <div id="op" class="ndmw">
+    <!-- Modal content -->
+    <div class="ndmw-content">
+      <button class="closeBiao" onclick="closeStart()">$QING</button>      
+    </div>
+  </div>
+  <center>
+  <audio id="song" controls>
+    <source src="remix.mp3" type="audio/mpeg">
+  </audio>
+  </center>
+  <div id="centerCol">
+      <div id="titlediv">
+        <img src="define.png"> <br/>
+        We Got Da $BIAO but where is Za $QING? <br/><br/>
+        我们有他妈的表那么情去了哪里 <br/>
+
+      </div>
+      <div id="infodiv">
+        <p>Twitter:<br/><a href="https://twitter.com/" target="_blank">@QINGSOL</a></p>
+        <p>TG:<br/><a href="https://t.me/" target="_blank">@QINGSOLANA</a></p>
+        <p>CA (合同):<br/><a href="https://etherscan.io/address/" target="_blank">TBA</a></p>
+        <p>DEX:<br/><a href="https://dexscreener.com/solana/"target="_blank">Dexscreener</a></p>
+      </div>
+      <div id="teamdiv">
+        <center>
+        <table class="teamTable">
+            <tr>
+                <th colspan="4"> Meet the indian devs - 来及印度的家人们 </th>
+            </tr>
+            <tr>
+                <td> <img src="shadesbiao2.jpg" height="200px"/> <td> Lord Qing.SOL <br/> 情 </td>
+                <td> <img src="biaopepe2.jpg" height="200px"/> <td> Doggy style <br/> 狗式 </td>
+            </tr>
+            <tr>
+              <td> <img src="superidol.jpg" height="200px"/> <td> Mr 69696969 Credit <br/> 好人 </td>
+              <td> <img src="wuzao.jpg" height="200px"/> <td> Bu bu gao yariya <br/> 张牙无爪 </td>
+          </tr>
+            <tr>
+                <td> <img src="telebiao2.jpg" height="200px"/> <td> Red sperm <br/> 红精 </td>
+                <td> <img src="surprisebiao2.png" height="200px"/> <td> Nicocado  Avocado <br/> 肥佬 </td>
+            </tr>
+            <tr>
+                <td> <img src="biaobiao.jpg" height="200px"/> <td> 4 months pregnant</br> 四月怀孕 </td>
+                <td> <img src="beerbiao2.jpg" height="200px"/> <td> Skammer <br/> 打飞机</td>
+            </tr>
+        </table>
+        </center>
+      </div>
+      <div id="gameDiv">
+        <h2 style="margin: 25px;">Play $QING Sword - 玩剑术游戏</h2>
+        <a href='game/index.html' target='_blank'><img src="game.png" width="1000px"/></a>
+      </div>
+      <div id="galleryDiv">
+        <center>
+        <h2 style="margin: 0; padding: 0;">$QING</h2>
+        <div class="gallery-container">
+          <div id="gallery"></div>
+        </div>
+        <a href='memes.html' target='_blank'>See All - 查看所有模因</a>
+        </center>
+      </div>
+      <div id="lifeDiv">
+          <h2 style="vertical-align: center;"><img src="lifesideleft.png" height="60px"/> &nbsp; $QING is <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">JEET</a> &nbsp; <img src="lifeside.png"  height="60px"/></h2>
+      
+          <canvas id="canvas" width="901" height="433"></canvas>
+
+          <div class="cl">&nbsp;</div>
+          <div class="box" style="display:none;">
+            <div class="subtitle">Running Information</div>
+            <p class="info"><abbr title="Current Generation">Generation</abbr>: <span id="generation"></span> | <abbr title="Number of live cells">Live cells</abbr>: <span id="livecells"></span> | <abbr title="Execution times: Algorithm / Canvas (Algorithm / Canvas Averages)">Step time</abbr>: <span id="steptime"></span> ms </p>
+
+          </div>
+
+          <div class="box controls">
+            <form action="#">
+              <input type="button" value="Run" id="buttonRun" title="Key: R" />
+              <input type="button" value="Step" id="buttonStep" title="Key: S" />
+              <input type="button" value="Clear" id="buttonClear" title="Key: C" />
+            </form>
+          </div>
+      </div>
+      
+      
+</body>
+
+<script>
+    function start() {
+        document.getElementById("op").style.display = "block";
+    }
+
+    function thereIsNoDarkMode() {
+      document.getElementById("ndm").style.display = "block";
+    }
+
+    function closeIt() {
+      document.getElementById("ndm").style.display = "none";
+    }
+    var closeStart = function() {
+        document.getElementById("op").style.display = "none";
+        var song = document.getElementById("song");
+        song.muted = false;
+        song.play();
+    }
+    start();
+    
+    window.addEventListener('DOMContentLoaded', function() {
+      /*fetch('images.json')
+        .then(response => response.json())
+        .then(data => {
+          const gallery = document.getElementById('gallery');
+          data.forEach(image => {
+            const img = document.createElement('div');
+            img.classList.add('gallery-item');
+            img.style.backgroundImage = `url(${image})`;
+            gallery.appendChild(img);
+          });
+        })
+        .catch(error => console.error('Error:', error));*/
+        const gallery = document.getElementById('gallery');
+
+        data = [
+
+            "memes/no.png",
+            "memes/567567567.jpg",
+            "memes/Fw6ogfkWIAIkXI2.jpg",
+            "memes/007e997f052ef40783ca71963d2f8544.jpg",
+            "memes/045b2631be99f799f91ba1a05d75a263.jpg",
+            "memes/09affbf6d7f27c8cdebd69faa8a1e7a2.jpg",
+            "memes/234234234.jpg",
+            "memes/45645645.jpg",
+            "memes/54d1409b3a6638330cace88def35a9b2.jpg",
+            "memes/55b54fb3d7734563a6887b32716ec845.jpg",
+            "memes/589589.png",
+            "memes/63763b232a0d1a704cbcb3568dedec59.jpg",
+            "memes/6756756.jpg",
+            "memes/825c29b4f325d83026bdc54ba6fc8182.jpg",
+            "memes/89089089.jpg",
+            "memes/89089089089.jpg",
+            "memes/8fb1c0f587ab71a7d31f09471ae7cfa9.jpg",
+            "memes/91f827e7080f8e96149acf5ea12631ba.jpg",
+            "memes/9320483.png",
+            "memes/c73541a1f7a6a17d4752c3ddbcdeea34.jpg",
+            "memes/dd6eaa63f1967fe388e51b012d84318e.jpg",
+            "memes/e878af7c0fd72d0dff5acd7ea02cacd5.jpg",
+            "memes/FxaObVYWIAMvkDn.jpg",
+            "memes/FxbQie0WAAM7Foj.jpg",
+            "memes/FxcgbPxWwAIOjAm.png",
+            "memes/FxCn8RIWYAAGRfx.png",
+            "memes/FxDXNkqWAAE_boa.jpg",
+            "memes/FxdXWfnWAAQt2w1.jpg",
+            "memes/Fxg3-MBXoAAK-i-.png",
+            "memes/Fxgd1HpWcAANgzT.jpg",
+            "memes/FxgMf9jWAAEOm5y.png",
+            "memes/FxhQ44XaIAAeW2f.jpg",
+            "memes/Fxi9m10X0AMd8AF.png",
+            "memes/Fxj3B07WAAcl-3z.png",
+            "memes/FxK1PgRXoAAz1GA.png",
+            "memes/FxkNKnKXwAAZkIa.jpg",
+            "memes/FxLHU7lXsAAEPqY.jpg",
+            "memes/FxLRDMwXgAEdmB-.png",
+            "memes/FxMGVApWAAAtQm3.png",
+            "memes/FxMRCGeX0AIcQLm.png",
+            "memes/FxNjXjWakAE5bb_.jpg",
+            "memes/FxnMu4UX0AIQhTo.jpg",
+            "memes/FxNxoRtXwAE7Y70.png",
+            "memes/FxO-EiBWIAEZLSY.png",
+            "memes/FxOMtYeXoAE9MVv.jpg",
+            "memes/FxOypKVX0AkvVJC.jpg",
+            "memes/FxP4Yh5WwAEMsqI.png",
+            "memes/FxPhT65XgAAlguS.jpg",
+            "memes/FxQXSxwWIAAALz7.jpg",
+            "memes/FxSQ-GwaIAAP9P8.jpg",
+            "memes/FxSw2I1WcAI9UK6.png",
+            "memes/FxVBdVAXgAI9gLn.png",
+
+            "memes/FxZBVsgWYAEI1aq.jpg",
+            "memes/gdfgfd.jpg"
+        ]
+        data.forEach(image => {
+            const img = document.createElement('img');
+            img.classList.add('gallery-item');
+            img.src = image;
+            gallery.appendChild(img);
+          });
+    });
+  </script>
+
+
+</html>
